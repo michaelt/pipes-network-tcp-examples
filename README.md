@@ -37,7 +37,7 @@ order:
 The following remarks will require that eight
 instances of a terminal all be opened in the main
 directory of the repository; if you like you can
-`cabal install` from the main directory, and a
+`cabal install` or `stack install` from the main directory, and a
 crude option parser will make the examples usable with
 one executable:
 ```bash
