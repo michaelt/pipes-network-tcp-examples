@@ -17,13 +17,15 @@ cabal-version:       >=1.10
 
 
 library
-  exposed-modules:     Examples.ServerToUpper
+  exposed-modules:     Examples.ClientPipeline
                        , Examples.ClientToUpper
+                       , Examples.ProxyAuth
+                       , Examples.ProxyToUpper
+                       , Examples.ServePipes
                        , Examples.ServerDouble
-                       , Examples.ClientPipeline
-                       
-                       
-  -- other-modules:       
+                       , Examples.ServerToUpper
+
+
   other-extensions:    OverloadedStrings
   build-depends:       base < 4.10
                        , pipes 
@@ -40,7 +42,13 @@ library
   
 executable pipes-network-tcp-examples
   main-is:             Main.hs
-  -- other-modules:       
+  other-modules:     Examples.ClientPipeline
+                       , Examples.ClientToUpper
+                       , Examples.ProxyAuth
+                       , Examples.ProxyToUpper
+                       , Examples.ServePipes
+                       , Examples.ServerDouble
+                       , Examples.ServerToUpper
   other-extensions:    OverloadedStrings
   build-depends:       base < 4.10
                        , pipes 
